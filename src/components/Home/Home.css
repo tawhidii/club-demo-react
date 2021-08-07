@@ -1,0 +1,11 @@
+.home{
+    background-color: black;
+}
+.team-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:20px;
+    padding-top: 50px;
+    margin-left: 30px;
+
+}
