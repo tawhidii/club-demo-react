@@ -8,10 +8,10 @@ import './Home.css'
 const Home = () => {
     const[teams,setTeams] = useState([])
     useEffect(()=>{
-        const url = 'https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=English%20Premier%20League'
+        const url = 'https://www.thesportsdb.com/api/v1/json/1/search_all_leagues.php?c=England'
         fetch(url)
         .then(response=>response.json())
-        .then(data=>setTeams(data.teams))
+        .then(data=>setTeams(data.countrys))
     },[])
     return (
         <div className="home">
@@ -20,7 +20,7 @@ const Home = () => {
         </div>
         <div className="team-list">
             {
-                teams.map(team=><Club key={team.idTeam} teams={team}></Club>)
+                teams.map(team=><Club key={team.idLeague} teams={team}></Club>)
             }
         </div>
         </div>
