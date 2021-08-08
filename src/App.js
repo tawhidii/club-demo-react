@@ -4,6 +4,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import ClubDetails from './components/ClubDetails/ClubDetails';
 import Home from './components/Home/Home';
 function App() {
   return (
@@ -14,9 +15,14 @@ function App() {
           <Route exact path="/">
             <Home/>
           </Route>
+         
 
           <Route path="/home">
             <Home/>
+          </Route>
+
+          <Route path="/club-details/:cId">
+            <ClubDetails/>  
           </Route>
 
         </Switch>
